@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html ng-app="store">
+<head>
+  <title>AngularjsTest</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= yield :stylesheet_assets %>
+
+  <%= javascript_include_tag "application" %>
+  <%= yield :javascript_assets %>
+
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= yield %>
+
+</body>
+</html>

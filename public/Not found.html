@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html><head>
+        <title>Not found</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">    
+    </head>
+    <body>
+                    
+<style type="text/css">
+    html, body {
+        margin: 0;
+        padding: 0;
+        font-family: Helvetica, Arial, Sans;
+        background: #EEEEEE;
+    }            
+    .block {
+        padding: 20px;
+        border-bottom: 1px solid #aaa;
+    }
+    #header h1 {
+        font-weight: normal;
+        font-size: 28px;
+        margin: 0;
+    }
+    #more {
+        color: #666;
+        font-size: 80%;
+        border: none;
+    }
+    #header {
+        background: #FFFFCC;
+    }
+    #header p {
+        color: #333;
+    }
+    #routes {
+        background: #f6f6f6;
+    }
+    #routes h2 {
+        font-weight: normal;
+        font-size: 18px;
+        margin: 0 0 10px 0;
+    }
+    #routes ol {
+     
+    }
+    #routes li {
+        font-size: 14px;
+        font-family: monospace;  
+        color: #333;
+    }
+</style>
+
+<div id="header" class="block">
+    <h1>
+        Not found
+    </h1>
+    <p>
+        GET /planesdesarrollos/
+    </p>
+</div>
+<div id="routes" class="block">
+    <h2>These routes have been tried, in this order :</h2>
+    <ol>
+                    <li>GET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/@documentation/cheatsheet/{category}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PlayDocumentation.cheatSheet
+ <!-- .*/@documentation/cheatsheet/({category}[^/]+) to PlayDocumentation[.]cheatSheet --></li>
+                    <li>GET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/@documentation/modules/{module}/files/{name}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PlayDocumentation.file
+ <!-- .*/@documentation/modules/({module}[^/]+)/files/({name}[^/]+) to PlayDocumentation[.]file --></li>
+                    <li>GET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/@documentation/modules/{module}/images/{name}&nbsp;&nbsp;&nbsp;&nbsp;PlayDocumentation.image
+ <!-- .*/@documentation/modules/({module}[^/]+)/images/({name}[^/]+) to PlayDocumentation[.]image --></li>
+                    <li>GET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/@documentation/modules/{module}/{id}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PlayDocumentation.page
+ <!-- .*/@documentation/modules/({module}[^/]+)/({id}[^/]+) to PlayDocumentation[.]page --></li>
+                    <li>GET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/@documentation/files/{name}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PlayDocumentation.file
+ <!-- .*/@documentation/files/({name}[^/]+) to PlayDocumentation[.]file --></li>
+                    <li>GET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/@documentation/images/{name}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PlayDocumentation.image
+ <!-- .*/@documentation/images/({name}[^/]+) to PlayDocumentation[.]image --></li>
+                    <li>GET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/@documentation/{id}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PlayDocumentation.page
+ <!-- .*/@documentation/({id}[^/]+) to PlayDocumentation[.]page --></li>
+                    <li>GET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/@documentation/?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PlayDocumentation.index
+ <!-- .*/@documentation/? to PlayDocumentation[.]index --></li>
+                    <li>GET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Application.index
+ <!-- .*/ to Application[.]index --></li>
+                    <li>GET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/usuarios/list&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Usuarios.list
+ <!-- .*/usuarios/list to Usuarios[.]list --></li>
+                    <li>GET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/usuarios/blank/{id}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Usuarios.blank
+ <!-- .*/usuarios/blank/({id}[^/]+) to Usuarios[.]blank --></li>
+                    <li>GET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/usuarios/show/{id}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Usuarios.show
+ <!-- .*/usuarios/show/({id}[^/]+) to Usuarios[.]show --></li>
+                    <li>GET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/usuarios/perfiles/list/{id}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Perfiles.list
+ <!-- .*/usuarios/perfiles/list/({id}[^/]+) to Perfiles[.]list --></li>
+                    <li>GET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/usuarios/perfiles/blank/{id}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Perfiles.blank
+ <!-- .*/usuarios/perfiles/blank/({id}[^/]+) to Perfiles[.]blank --></li>
+                    <li>GET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/usuarios/perfiles/show/{id}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Perfiles.show
+ <!-- .*/usuarios/perfiles/show/({id}[^/]+) to Perfiles[.]show --></li>
+                    <li>GET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/usuarios/perfiles/permisos/{id}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Permisos.list
+ <!-- .*/usuarios/perfiles/permisos/({id}[^/]+) to Permisos[.]list --></li>
+                    <li>GET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/usuarios/perfiles/permisos/blank/{id}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Permisos.blank
+ <!-- .*/usuarios/perfiles/permisos/blank/({id}[^/]+) to Permisos[.]blank --></li>
+                    <li>GET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/usuarios/perfiles/permisos/show/{id}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Permisos.show
+ <!-- .*/usuarios/perfiles/permisos/show/({id}[^/]+) to Permisos[.]show --></li>
+                    <li>GET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/ejercicios/list/?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ejercicios.list
+ <!-- .*/ejercicios/list/? to Ejercicios[.]list --></li>
+                    <li>GET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/ejercicios/blank/{id}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ejercicios.blank
+ <!-- .*/ejercicios/blank/({id}[^/]+) to Ejercicios[.]blank --></li>
+                    <li>GET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/ejercicios/show/{id}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ejercicios.show
+ <!-- .*/ejercicios/show/({id}[^/]+) to Ejercicios[.]show --></li>
+                    <li>GET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/planes/desarrollo/list&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PlanesDesarrollo.list
+ <!-- .*/planes/desarrollo/list to PlanesDesarrollo[.]list --></li>
+                    <li>GET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/planes/desarrollo/blank/{id}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PlanesDesarrollo.blank
+ <!-- .*/planes/desarrollo/blank/({id}[^/]+) to PlanesDesarrollo[.]blank --></li>
+                    <li>GET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/planes/desarrollo/show/{id}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PlanesDesarrollo.show
+ <!-- .*/planes/desarrollo/show/({id}[^/]+) to PlanesDesarrollo[.]show --></li>
+                    <li>GET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/planes/desarrollo/ejes/list/{id}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EjesPlanesDesarrollo.list
+ <!-- .*/planes/desarrollo/ejes/list/({id}[^/]+) to EjesPlanesDesarrollo[.]list --></li>
+                    <li>GET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/planes/desarrollo/ejes/blank/{id}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EjesPlanesDesarrollo.blank
+ <!-- .*/planes/desarrollo/ejes/blank/({id}[^/]+) to EjesPlanesDesarrollo[.]blank --></li>
+                    <li>GET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/planes/desarrollo/ejes/show/{id}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EjesPlanesDesarrollo.show
+ <!-- .*/planes/desarrollo/ejes/show/({id}[^/]+) to EjesPlanesDesarrollo[.]show --></li>
+                    <li>GET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/compromisos/internacionales/list&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CompromisosInternacionales.list
+ <!-- .*/compromisos/internacionales/list to CompromisosInternacionales[.]list --></li>
+                    <li>GET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/compromisos/internacionales/blank/{id}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CompromisosInternacionales.blank
+ <!-- .*/compromisos/internacionales/blank/({id}[^/]+) to CompromisosInternacionales[.]blank --></li>
+                    <li>GET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/compromisos/internacionales/show/{id}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CompromisosInternacionales.show
+ <!-- .*/compromisos/internacionales/show/({id}[^/]+) to CompromisosInternacionales[.]show --></li>
+                    <li>GET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/compromisos/internacionales/ejes/list/{id}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EjesCompromisosInternacionales.list
+ <!-- .*/compromisos/internacionales/ejes/list/({id}[^/]+) to EjesCompromisosInternacionales[.]list --></li>
+                    <li>GET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/compromisos/internacionales/ejes/blank/{id}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EjesCompromisosInternacionales.blank
+ <!-- .*/compromisos/internacionales/ejes/blank/({id}[^/]+) to EjesCompromisosInternacionales[.]blank --></li>
+                    <li>GET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/compromisos/internacionales/ejes/show/{id}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EjesCompromisosInternacionales.show
+ <!-- .*/compromisos/internacionales/ejes/show/({id}[^/]+) to EjesCompromisosInternacionales[.]show --></li>
+                    <li>GET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/compromisos/internacionales/ejes/indicadores/list/{id}IndicadoresCompromisosInternacionales.list
+ <!-- .*/compromisos/internacionales/ejes/indicadores/list/({id}[^/]+) to IndicadoresCompromisosInternacionales[.]list --></li>
+                    <li>GET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/compromisos/internacionales/ejes/indicadores/show/{id}IndicadoresCompromisosInternacionales.show
+ <!-- .*/compromisos/internacionales/ejes/indicadores/show/({id}[^/]+) to IndicadoresCompromisosInternacionales[.]show --></li>
+                    <li>GET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/compromisos/internacionales/ejes/indicadores/blank/{id}IndicadoresCompromisosInternacionales.blank
+ <!-- .*/compromisos/internacionales/ejes/indicadores/blank/({id}[^/]+) to IndicadoresCompromisosInternacionales[.]blank --></li>
+                    <li>GET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/compromisos/internacionales/ejes/indicadores/metas/list/{id}MetasCompromisosInternacionales.list
+ <!-- .*/compromisos/internacionales/ejes/indicadores/metas/list/({id}[^/]+) to MetasCompromisosInternacionales[.]list --></li>
+                    <li>GET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/compromisos/internacionales/ejes/indicadores/metas/show/{id}MetasCompromisosInternacionales.show
+ <!-- .*/compromisos/internacionales/ejes/indicadores/metas/show/({id}[^/]+) to MetasCompromisosInternacionales[.]show --></li>
+                    <li>GET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/compromisos/internacionales/ejes/indicadores/metas/blank/{id}MetasCompromisosInternacionales.blank
+ <!-- .*/compromisos/internacionales/ejes/indicadores/metas/blank/({id}[^/]+) to MetasCompromisosInternacionales[.]blank --></li>
+                    <li>GET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/clasificacionfuncional/list&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ClasificadorFuncionalGenerales.list
+ <!-- .*/clasificacionfuncional/list to ClasificadorFuncionalGenerales[.]list --></li>
+                    <li>GET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/clasificacionfuncional/blank/{id}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ClasificadorFuncionalGenerales.blank
+ <!-- .*/clasificacionfuncional/blank/({id}[^/]+) to ClasificadorFuncionalGenerales[.]blank --></li>
+                    <li>GET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/clasificacionfuncional/show/{id}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ClasificadorFuncionalGenerales.show
+ <!-- .*/clasificacionfuncional/show/({id}[^/]+) to ClasificadorFuncionalGenerales[.]show --></li>
+                    <li>GET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/conac/niveles/gobierno/list&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CONACNivelesGobierno.list
+ <!-- .*/conac/niveles/gobierno/list to CONACNivelesGobierno[.]list --></li>
+                    <li>GET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/conac/niveles/gobierno/blank&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CONACNivelesGobierno.blank
+ <!-- .*/conac/niveles/gobierno/blank to CONACNivelesGobierno[.]blank --></li>
+                    <li>GET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/conac/niveles/gobierno/show/{id}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CONACNivelesGobierno.show
+ <!-- .*/conac/niveles/gobierno/show/({id}[^/]+) to CONACNivelesGobierno[.]show --></li>
+                    <li>GET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/conac/sectores/publicos/list/{id}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CONACSectoresPublicos.list
+ <!-- .*/conac/sectores/publicos/list/({id}[^/]+) to CONACSectoresPublicos[.]list --></li>
+                    <li>GET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/conac/sectores/publicos/blank/{id}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CONACSectoresPublicos.blank
+ <!-- .*/conac/sectores/publicos/blank/({id}[^/]+) to CONACSectoresPublicos[.]blank --></li>
+                    <li>GET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/conac/sectores/publicos/show/{id}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CONACSectoresPublicos.show
+ <!-- .*/conac/sectores/publicos/show/({id}[^/]+) to CONACSectoresPublicos[.]show --></li>
+                    <li>GET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/conac/sectores/list/{id}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CONACSectores.list
+ <!-- .*/conac/sectores/list/({id}[^/]+) to CONACSectores[.]list --></li>
+                    <li>GET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/conac/sectores/blank/{id}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CONACSectores.blank
+ <!-- .*/conac/sectores/blank/({id}[^/]+) to CONACSectores[.]blank --></li>
+                    <li>GET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/conac/sectores/show/{id}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CONACSectores.show
+ <!-- .*/conac/sectores/show/({id}[^/]+) to CONACSectores[.]show --></li>
+                    <li>GET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/conac/sub-sectores/list/{id}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CONACSubSectores.list
+ <!-- .*/conac/sub-sectores/list/({id}[^/]+) to CONACSubSectores[.]list --></li>
+                    <li>GET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/conac/sub-sectores/blank/{id}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CONACSubSectores.blank
+ <!-- .*/conac/sub-sectores/blank/({id}[^/]+) to CONACSubSectores[.]blank --></li>
+                    <li>GET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/conac/sub-sectores/show/{id}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CONACSubSectores.show
+ <!-- .*/conac/sub-sectores/show/({id}[^/]+) to CONACSubSectores[.]show --></li>
+                    <li>GET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/conac/particularidades/list/{id}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CONACParticularidades.list
+ <!-- .*/conac/particularidades/list/({id}[^/]+) to CONACParticularidades[.]list --></li>
+                    <li>GET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/conac/particularidades/blank/{id}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CONACParticularidades.blank
+ <!-- .*/conac/particularidades/blank/({id}[^/]+) to CONACParticularidades[.]blank --></li>
+                    <li>GET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/conac/particularidades/show/{id}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CONACParticularidades.show
+ <!-- .*/conac/particularidades/show/({id}[^/]+) to CONACParticularidades[.]show --></li>
+                    <li>GET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/componenteactividadgenerales/list/?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ComponenteActividadGenerales.list
+ <!-- .*/componenteactividadgenerales/list/? to ComponenteActividadGenerales[.]list --></li>
+                    <li>GET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/componenteactividadgenerales/blank/{id}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ComponenteActividadGenerales.blank
+ <!-- .*/componenteactividadgenerales/blank/({id}[^/]+) to ComponenteActividadGenerales[.]blank --></li>
+                    <li>GET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/componenteactividadgenerales/show/{id}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ComponenteActividadGenerales.show
+ <!-- .*/componenteactividadgenerales/show/({id}[^/]+) to ComponenteActividadGenerales[.]show --></li>
+                    <li>GET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/favicon.ico&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;404
+ <!-- .*/favicon.ico to 404 --></li>
+                    <li>GET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/public/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;staticDir:public
+ <!-- .*^/public/({resource}.*)$ to  --></li>
+                    <li>*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/{controller}/{action}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{controller}.{action}
+ <!-- .*/({controller}[^/]+)/({action}[^/]+) to ({controller}[^/]+)[.]({action}[^/]+) --></li>
+            </ol>
+</div>
+
+
+                    
+
+</body></html>
