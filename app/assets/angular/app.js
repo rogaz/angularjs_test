@@ -9,12 +9,21 @@
         {
             name: 'Dodecahedron',
             price: 2.95,
-            description: '...',
+            description: 'Yellow',
             soldOut: false,
-            images: [
-                'img1.jpg',
-                'img2.jpg',
-                'img3.jpg'
+            images: [],
+            reviews: [
+                {
+                    stars: 5,
+                    body: "I love this product!",
+                    author: "joe@thomas.com"
+                },
+                {
+                    stars: 1,
+                    body: "This product sucks",
+                    author: "tim@hater.com"
+                }
+
             ]
         },
         {
@@ -22,7 +31,12 @@
             price: 6.52,
             description: 'Red',
             soldOut: false,
-            images: []
+            images: [
+                'img1.jpg',
+                'img2.jpg',
+                'img3.jpg'
+            ],
+            reviews: []
         }
     ];
 
@@ -31,9 +45,33 @@
 
         this.selectTab = function(setTab){
             this.tab = setTab;
-        }
+        };
         this.isSelected =  function(checkTab){
             return this.tab === checkTab;
-        }
+        };
+    });
+
+    app.controller("GalleryController", function(){
+        this.current = 0;
+
+        this.setCurrent = function(current){
+            if (current === null)
+                this.current = 0;
+            else
+                this.current = current;
+        };
+
+        this.isSelected = function(image){
+            return this.current === image;
+        };
+    });
+
+    app.controller("ReviewController", function(){
+        this.review = {};
+
+        this.addReview = function(product){
+            product.reviews.push(this.review);
+            this.review = {};
+        };
     });
 })();

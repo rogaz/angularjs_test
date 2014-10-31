@@ -8,12 +8,22 @@
           <h1> {{product.name}} </h1>
           <h2> {{product.price | currency}} </h2>
           <p> {{product.description}} </p>
-        <div class="gallery" ng-show="product.images">
-          <ul>
-            <li ng-repeat="image in product.images | limitTo:2" style="list-style: none;">
+        <div class="gallery" ng-controller="GalleryController as gallery" ng-show="product.images">
+          <p>
+              <div>
+                <img ng-src="{{product.images[gallery.current]}}"/>
+              </div>
+              <div class="btn-group">
+                <button type="button" class="btn btn-default" ng-class="{active:gallery.isSelected(0)}" ng-click="gallery.setCurrent(0)">1</button>
+                <button type="button" class="btn btn-default" ng-class="{active:gallery.isSelected(1)}" ng-click="gallery.setCurrent(1)">2</button>
+                <button type="button" class="btn btn-default" ng-class="{active:gallery.isSelected(2)}" ng-click="gallery.setCurrent(2)">3</button>
+              </div>
+          </p>
+          <!--<ul>
+            <li ng-repeat="image in product.images | limitTo:3" style="list-style: none;">
               <img ng-src="{{image}}"/>
             </li>
-          </ul>
+          </ul>-->
         </div>
       </div>
       <section ng-controller="PanelController as panel">
@@ -32,7 +42,31 @@
         </div>
         <div class="panel" ng-show="panel.isSelected(3)">
           <h4>Reviews</h4>
-          <blockquote>None yet</blockquote>
+          <blockquote ng-repeat="review in product.reviews">
+            <b>Stars: {{review.stars}}</b>
+            {{review.body}}
+            <cite>by: {{review.author}}</cite>
+          </blockquote>
+
+          <%= form_tag '', name: 'reviewForm', :'ng-controller' => 'ReviewController as reviewCtrl', :'ng-submit' => 'reviewCtrl.addReview(product)', role: 'form', novalidate: '' %>
+            <blockquote>
+              <b>Stars: {{reviewCtrl.review.stars}}</b>
+              {{reviewCtrl.review.body}}
+              <cite>by: {{reviewCtrl.review.author}}</cite>
+            </blockquote>
+
+            <div class="form-group">
+              <%= select :stars, :number, [['1 star', 1], ['2 star', 2], ['3 star', 3], ['4 star', 4], ['5 star', 5]], { prompt: 'Rate the product' }, {:'ng-model' => 'reviewCtrl.review.stars', class: 'form-control', required: true} %>
+            </div>
+            <div class="form-group">
+              <%= text_area_tag :text, '', {:'ng-model' => 'reviewCtrl.review.body', class: 'form-control', required: true} %>
+            </div>
+            <div class="form-group">
+              <%= label_tag 'by:' %>
+              <%= text_field_tag :email, '', type: :email, :'ng-model' => 'reviewCtrl.review.author', class: 'form-control', required: true %>
+            </div>
+            <div> reviewForm is {{reviewForm.$valid}} </div>
+            <div><%= submit_tag 'Submit' %></div>
         </div>
       </section>
   </div>
