@@ -2,6 +2,16 @@
     <%= javascript_include_tag 'driversController' %>
 <% end %>
 
+<style>
+  .ng-invalid.ng-dirty {
+      border-color: #FA787E;
+  }
+
+  .ng-valid.ng-dirty {
+      border-color: #78FA89;
+  }
+</style>
+
 <div ng-controller="StoreController as store" style="margin: 0 auto; width: 500px">
   <div ng-repeat="product in store.products | orderBy:'-price'">
       <div ng-hide="product.soldOut">
@@ -45,15 +55,15 @@
           <blockquote ng-repeat="review in product.reviews">
             <b>Stars: {{review.stars}}</b>
             {{review.body}}
-            <cite>by: {{review.author}}</cite>
+            <cite>{{review.author}} on {{review.createdOn | date : format : timezone}}</cite>
           </blockquote>
 
           <%#= form_tag '', name: 'reviewForm', :'ng-controller' => 'ReviewController as reviewCtrl', :'ng-submit' => 'reviewCtrl.addReview(product)', role: 'form', novalidate: '' %>
-          <form name="reviewForm" ng-controller="ReviewController as reviewCtrl" ng-submit="reviewCtrl.addReview(product)" role="form" novalidate>
+          <form name="reviewForm" ng-controller="ReviewController as reviewCtrl" ng-submit="reviewForm.$valid && reviewCtrl.addReview(product)" role="form" novalidate>
             <blockquote>
               <b>Stars: {{reviewCtrl.review.stars}}</b>
               {{reviewCtrl.review.body}}
-              <cite>by: {{reviewCtrl.review.author}}</cite>
+              <cite>{{reviewCtrl.review.author}}</cite>
             </blockquote>
 
             <div class="form-group">
