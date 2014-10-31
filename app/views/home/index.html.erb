@@ -48,7 +48,8 @@
             <cite>by: {{review.author}}</cite>
           </blockquote>
 
-          <%= form_tag '', name: 'reviewForm', :'ng-controller' => 'ReviewController as reviewCtrl', :'ng-submit' => 'reviewCtrl.addReview(product)', role: 'form', novalidate: '' %>
+          <%#= form_tag '', name: 'reviewForm', :'ng-controller' => 'ReviewController as reviewCtrl', :'ng-submit' => 'reviewCtrl.addReview(product)', role: 'form', novalidate: '' %>
+          <form name="reviewForm" ng-controller="ReviewController as reviewCtrl" ng-submit="reviewCtrl.addReview(product)" role="form" novalidate>
             <blockquote>
               <b>Stars: {{reviewCtrl.review.stars}}</b>
               {{reviewCtrl.review.body}}
@@ -56,17 +57,28 @@
             </blockquote>
 
             <div class="form-group">
-              <%= select :stars, :number, [['1 star', 1], ['2 star', 2], ['3 star', 3], ['4 star', 4], ['5 star', 5]], { prompt: 'Rate the product' }, {:'ng-model' => 'reviewCtrl.review.stars', class: 'form-control', required: true} %>
+              <%#= select :stars, :number, [['1 star', 1], ['2 star', 2], ['3 star', 3], ['4 star', 4], ['5 star', 5]], { prompt: 'Rate the product' }, {:'ng-model' => 'reviewCtrl.review.stars', class: 'form-control', required: true} %>
+              <select ng-model="reviewCtrl.review.stars" class="form-control" required>
+                <option value="1">1 star</option>
+                <option value="2">2 stars</option>
+                <option value="3">3 stars</option>
+                <option value="4">4 stars</option>
+                <option value="5">5 stars</option>
+              </select>
             </div>
             <div class="form-group">
-              <%= text_area_tag :text, '', {:'ng-model' => 'reviewCtrl.review.body', class: 'form-control', required: true} %>
+              <%#= text_area_tag :text, '', {:'ng-model' => 'reviewCtrl.review.body', class: 'form-control', required: true} %>
+              <textarea name="body" ng-model="reviewCtrl.review.body" class="form-control" required></textarea>
             </div>
             <div class="form-group">
-              <%= label_tag 'by:' %>
-              <%= text_field_tag :email, '', type: :email, :'ng-model' => 'reviewCtrl.review.author', class: 'form-control', required: true %>
+              <%#= label_tag 'by:' %>
+              <%#= text_field_tag :email, '', type: :email, :'ng-model' => 'reviewCtrl.review.author', class: 'form-control', required: true %>
+              <label>by:</label>
+              <input name="author" ng-model="reviewCtrl.review.author" type="email" class="form-control" required/>
             </div>
             <div> reviewForm is {{reviewForm.$valid}} </div>
             <div><%= submit_tag 'Submit' %></div>
+          </form>
         </div>
       </section>
   </div>
